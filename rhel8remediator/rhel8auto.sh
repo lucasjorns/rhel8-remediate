@@ -74,7 +74,7 @@ else
 	read -p "Playbook is missing dependancies! Would you like them installed?(Y/n):" answer
 
 	case $answer in
-		[yY] ) yes | ansible-galaxy collection install -r ./requirements.yml;;
+		[yY] ) yes | ansible-galaxy collection install -r ./rhel8remeidator/requirements.yml;;
 		[nN] ) echo "Ansible dependancy install aborted! exiting..."; exit;;
 		* ) echo "Invalid response! exiting..."; exit;;
 	esac
