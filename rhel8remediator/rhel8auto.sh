@@ -86,7 +86,7 @@ fi
 read -p "Ansible playbook loaded for RHEL 8. Proceed with remediation? (Y/n):" answer
 
 	case $answer in
-		[yY] ) ansible-playbook -i ./inventory.ini rhel8playbook.yaml;;
+		[yY] ) ansible-playbook -i ./inventory.ini ./rhel8remediator/rhel8playbook.yaml;;
 		[nN] ) echo "Remediation aborted! exiting..."; exit;;
 		* ) echo "Invalid response! exiting..."; exit;;
 	esac
