@@ -57,7 +57,7 @@ else
 	read -p "Ansible core not found! Would you like to install it?(Y/n):" answer
 
 	case $answer in
-		[yY] ) yes | dnf install ansible;;
+		[yY] ) yes | dnf install ansible-core;;
 		[nN] ) echo "Ansible install aborted! exiting..."; exit;;
 		* ) echo "Invalid response! exiting..."; exit;;
 	esac
